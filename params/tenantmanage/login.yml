@@ -1,0 +1,18 @@
+#登录参数
+login:
+  - #用户名密码正确
+    path: /admin/adminAccount/login
+    headers: {'Content-Type':'application/json;charset=UTF-8'}
+    param: {"account":"18668219620","pwd":"111111"}
+    expected:
+      - '"errorCode":"0"'
+      - '"errorMsg":"success"'
+      - '"success":true'
+  - #用户名密码错误
+    path: /admin/adminAccount/login
+    headers: {'Content-Type':'application/json;charset=UTF-8'}
+    param: {"account":"18668219622","pwd":"111111"}
+    expected:
+      - '"errorCode":"200001002"'
+      - '"errorMsg":"用户名或密码错误，请重新输入"'
+      - '"success":false'
