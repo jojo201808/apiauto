@@ -1,16 +1,23 @@
 #登录参数
-fppath: 
+#脚本文件描述
+filedesc: 登录的接口用例 AutoCreate
+#生成的脚本文件保存路径 大目录cases下面
+savepath: 
   - tenantmanage
-  - test_loin1.py
-fidesc: 登录的接口用例
-filename: test_login1.py
+  - test_login.py
+#类名称，描述
 cname: TestLogin
 cdesc: 登录
+#用例数据
 cdata:
   - 
+    #用例顺序，用于获取参数，因用pytest传参，所以是数组形式，里面只有一个元素
     seq: 0
+    #用例描述
     fdesc: 正确的用户名，密码
+    #用例名，函数名
     fname: test_success
+    #路径
     path: /admin/adminAccount/login
     headers: {'Content-Type':'application/json;charset=UTF-8'}
     param: {"account":"18668219620","pwd":"111111"}
@@ -29,3 +36,11 @@ cdata:
       - '"errorCode":"200001002"'
       - '"errorMsg":"用户名或密码错误，请重新输入"'
       - '"success":false'
+#fixture固件相关参数
+prefixture: 
+  filedesc: 获取yml数据，返回请求值以及期望值
+  savepath:
+    - tenantmanage
+    - conftest.py
+  funcname: getdata
+  funcscope: function

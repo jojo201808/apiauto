@@ -8,42 +8,26 @@ def getdata():
     filepath = os.path.join(os.getcwd(),'params','tenantmanage','login.yml')
     print(filepath)
     data = getyml.getdata(filepath)
-    return data
+    return data,filepath
 
 
 
 #模板1：test 普通的post请求模板
 def case_tem1():
-    data = getdata()
+    data,filepath = getdata()
     #引入库模板
-    si = '''
-import pytest
+    si = '''import pytest
 from apiauto.common import getyml
 import os
 import requests
 from apiauto.conf import config
 import allure
     '''
-    #获取数据函数
-    sd = '''
-def getdata(reqnum):
-    path = data['cdata'][reqnum]['path']
-    headers = data['cdata'][reqnum]['headers']
-    param = data['cdata'][reqnum]['param']
-    expected = data['cdata'][reqnum]['expected']
-    #获取baseurl
-    base_url = config.getconfig()['test_env']['baseurl']
-    urlpath = base_url + path
-    fdesc = data['cdata'][reqnum]['fdesc']
-    fname = data['cdata'][reqnum]['fname']
-    return urlpath,headers,param,expected    
-    '''
-
     #脚本描述
     sdesc = Template('''
-    $fidesc
+    #$fidesc
     ''')
-    sdesc_data = {'fidesc':data['fidesc']}
+    sdesc_data = {'fidesc':data['filedesc']}
     sdesc = sdesc.substitute(sdesc_data)
 
     #类模板
@@ -57,9 +41,9 @@ class $cname:
     #方法模板
     sf = Template('''
     @allure.story('$fdesc')
-    def $funcname(self):
-        urlpath,headers,param,expected = getdata($seqnum)
-        print(urlpath)
+    @pytest.mark.parametrize('$fixturefunc',$fixtureparam,indirect=True)
+    def $funcname(self,$fixturefunc):
+        urlpath,headers,param,expected = $fixturefunc
         r = requests.post(url=urlpath,headers=headers,json=param)
         content = r.text
         #循环断言
@@ -72,22 +56,54 @@ class $cname:
         d = {}
         d['fdesc'] = i['fdesc']
         d['funcname'] = i['fname']
-        d['seqnum'] = i['seq']
+        d['fixturefunc'] = data['prefixture']['funcname']
+        d['fixtureparam'] = [{'seq':i['seq'],'filep':filepath }]
         paramlist.append(d)
     
     print(paramlist)
     #合并
-    script = si + sd + sc
+    script = si + sdesc + sc
     #赋值
     for d in paramlist:
         sfd = sf.substitute(d)
         script = script + sfd
     
-    filepath = os.path.join(os.getcwd(),'cases',data['fppath'][0],data['fppath'][1])
+    #创建py用例脚本文件
+    filepath = os.path.join(os.getcwd(),'cases',data['savepath'][0],data['savepath'][1])
     with open(filepath,'w',encoding='utf-8') as f:
         f.write(script)
 
+    #创建fixture固件文件
+    sfixture = Template('''
+#获取参数
+@pytest.fixture(scope="$funcscope")
+def getdata(request):
+    reqparm= request.param
+    #参数文件路径
+    filepath = reqparm['filep']
+    reqnum = reqparm['seq']
+    data = getyml.getdata(filepath)
+    path = data['cdata'][reqnum]['path']
+    headers = data['cdata'][reqnum]['headers']
+    param = data['cdata'][reqnum]['param']
+    expected = data['cdata'][reqnum]['expected']
+    #获取baseurl
+    base_url = config.getconfig()['test_env']['baseurl']
+    urlpath = base_url + path
+    fdesc = data['cdata'][reqnum]['fdesc']
+    fname = data['cdata'][reqnum]['fname']
+    return urlpath,headers,param,expected    
+    ''')
+    fixturedata = {'funcscope':data['prefixture']['funcscope']}
+    sfixture = sfixture.substitute(fixturedata)
+    #创建测试固件
+    ffilepath = os.path.join(os.getcwd(),'cases',data['prefixture']['savepath'][0],data['prefixture']['savepath'][1])
+    with open(ffilepath,'a',encoding='utf-8') as f:
+        f.write(sfixture)    
+
+
 case_tem1()
-#模板2 固件
-def fixture_tem():
-    pass
+
+
+
+    
