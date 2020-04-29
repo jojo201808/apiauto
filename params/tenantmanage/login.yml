@@ -1,6 +1,16 @@
 #登录参数
-login:
-  - #用户名密码正确
+fppath: 
+  - tenantmanage
+  - test_loin1.py
+fidesc: 登录的接口用例
+filename: test_login1.py
+cname: TestLogin
+cdesc: 登录
+cdata:
+  - 
+    seq: 0
+    fdesc: 正确的用户名，密码
+    fname: test_success
     path: /admin/adminAccount/login
     headers: {'Content-Type':'application/json;charset=UTF-8'}
     param: {"account":"18668219620","pwd":"111111"}
@@ -8,7 +18,10 @@ login:
       - '"errorCode":"0"'
       - '"errorMsg":"success"'
       - '"success":true'
-  - #用户名密码错误
+  - 
+    seq: 1
+    fdesc: 错误的用户名密码
+    fname: test_fail
     path: /admin/adminAccount/login
     headers: {'Content-Type':'application/json;charset=UTF-8'}
     param: {"account":"18668219622","pwd":"111111"}
