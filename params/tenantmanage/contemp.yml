@@ -1,0 +1,58 @@
+#用于定义conftest中的公共数据
+#模板1获取yamldata的返回值
+templatetype: -1
+templates: 
+-
+  type: 0
+  desc: 获取yml数据文件，返回请求值以及期望值
+  funcname: getdata
+  savepath: 
+    - tenantmanage
+    - conftest.py
+  funcscope: function
+
+#模板2 该模板是接口可作为其他接口的前置条件
+-
+  type: 1
+  desc: 返回数据给下一个接口使用，如token
+  funcname: getrspparam
+  funcscope: class
+  savepath: 
+    - tenantmanage
+    - conftest.py
+ 
+#模板3 数据库操作的模板
+-
+  type: 2
+  desc: 数据库操作
+  funcname: dealsql
+  savepath: 
+    - tenantmanage
+    - conftest.py 
+  funcscope: function
+ 
+ #模板4单纯的接口操作，可用于处理前置，后置
+-
+  type: 3
+  desc: 单纯的接口前置操作
+  funcname: reqbefore
+  savepath: 
+    - tenantmanage
+    - conftest.py
+  #需要新建的时候读取该模板进行修改
+  funcscope: function
+
+-
+  type: 4
+  desc: 单纯的接口后置操作
+  funcname: reqafter
+  savepath: 
+    - tenantmanage
+    - conftest.py
+  #需要新建的时候读取该模板进行修改
+  funcscope: function
+
+
+
+
+  

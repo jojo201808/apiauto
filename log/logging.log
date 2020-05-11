@@ -4,3 +4,295 @@
 2020-04-27 13:44:32 - simpleExample - INFO - testttt
 2020-04-27 13:44:32 - simpleExample - DEBUG - aaaa
 2020-04-27 13:44:32 - simpleExample - ERROR - afafdafads
+2020-04-30 17:27:09 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:27:09 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:27:09 - root - INFO - {"errorCode":"200001002","errorMsg":"用户名或密码错误，请重新输入","success":false,"data":null}
+2020-04-30 17:27:09 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:27:09 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:27:09 - root - INFO - {"errorCode":"200001002","errorMsg":"用户名或密码错误，请重新输入","success":false,"data":null}
+2020-04-30 17:27:59 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:27:59 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:27:59 - root - INFO - {"errorCode":"0","errorMsg":"success","success":true,"data":"cqmk1ls9uex8qsojhzhgzz14y0fb650p"}
+2020-04-30 17:28:00 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:28:00 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:28:00 - root - INFO - {"errorCode":"0","errorMsg":"success","success":true,"data":"8uf45acwle8aott9zew3fzo0qn3ak5vc"}
+2020-04-30 17:31:46 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:31:46 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:31:46 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': 'e9ypbxqk40bdr08k366w1qt1n17fml2j'}
+2020-04-30 17:31:46 - root - INFO - e9ypbxqk40bdr08k366w1qt1n17fml2j
+2020-04-30 17:31:47 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:31:47 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:31:47 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': 'tzjoo5wsriymjaw2cjo5e5wvljlz58bp'}
+2020-04-30 17:31:47 - root - INFO - tzjoo5wsriymjaw2cjo5e5wvljlz58bp
+2020-04-30 17:37:01 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:37:02 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:38:22 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:38:23 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:38:43 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:38:43 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:38:43 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:38:43 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': '12yxh9o5zx87w3omqzk5lgswjmnqffx6'}
+2020-04-30 17:38:43 - root - INFO - 12yxh9o5zx87w3omqzk5lgswjmnqffx6
+2020-04-30 17:38:44 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:38:44 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:38:44 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:38:44 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': 'lgcrw544e912e5je0oprxj2jlyav841m'}
+2020-04-30 17:38:44 - root - INFO - lgcrw544e912e5je0oprxj2jlyav841m
+2020-04-30 17:41:04 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:41:04 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:41:04 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:41:04 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': 'zgl334hr30jiiq08vlr1qutni7hwmrmv'}
+2020-04-30 17:41:04 - root - INFO - zgl334hr30jiiq08vlr1qutni7hwmrmv
+2020-04-30 17:41:05 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:41:05 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:41:05 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:41:05 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': '8e1ubgs6bp0hn9gpsy8ezscx9tsstvic'}
+2020-04-30 17:41:05 - root - INFO - 8e1ubgs6bp0hn9gpsy8ezscx9tsstvic
+2020-04-30 17:42:23 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:42:23 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:42:23 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:42:23 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': '7hqera2qaes67pfwpo9w4cp37yiyccmu'}
+2020-04-30 17:42:23 - root - INFO - 7hqera2qaes67pfwpo9w4cp37yiyccmu
+2020-04-30 17:42:24 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:42:24 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:42:24 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:42:24 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': 'i55aiszbuduulkiqeswruei9dumtyfhu'}
+2020-04-30 17:42:24 - root - INFO - i55aiszbuduulkiqeswruei9dumtyfhu
+2020-04-30 17:43:00 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:43:00 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:43:00 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:43:01 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': 'pv3uj1g1zwrx9zxgvpep7pw3h2uvoovw'}
+2020-04-30 17:43:01 - root - INFO - pv3uj1g1zwrx9zxgvpep7pw3h2uvoovw
+2020-04-30 17:43:01 - root - INFO - e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-04-30 17:43:01 - root - INFO - /admin/adminAccount/login
+2020-04-30 17:43:01 - root - INFO - http://testoptional.ejoy99.com/proxy/admin/adminAccount/login
+2020-04-30 17:43:01 - root - INFO - {'errorCode': '0', 'errorMsg': 'success', 'success': True, 'data': '5jxrrzkyc9h3pu8h61ijpwxxz7wxz4h0'}
+2020-04-30 17:43:01 - root - INFO - 5jxrrzkyc9h3pu8h61ijpwxxz7wxz4h0
+2020-05-11 14:49:22 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 14:49:22 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 14:49:22 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 14:49:22 - root - INFO - 生成conftest中的数据:
+2020-05-11 14:49:22 - root - INFO - 生成fixture1
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing BlpImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing BmpImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing BufrStubImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing CurImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing DcxImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing DdsImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing EpsImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing FitsStubImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing FliImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing FpxImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing FtexImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing GbrImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing GifImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing GribStubImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing IcnsImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing IcoImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing ImImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing ImtImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing IptcImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing JpegImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing McIdasImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing MicImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing MpegImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing MpoImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing MspImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing PalmImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing PcdImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing PcxImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing PdfImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing PixarImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing PngImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing PpmImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing PsdImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing SgiImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing SpiderImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing SunImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing TgaImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing TiffImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing WebPImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing WmfImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing XbmImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing XpmImagePlugin
+2020-05-11 14:49:23 - PIL.Image - DEBUG - Importing XVThumbImagePlugin
+2020-05-11 14:50:53 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 14:50:53 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 14:50:53 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 14:50:53 - root - INFO - 生成conftest中的数据:
+2020-05-11 14:50:53 - root - INFO - 生成fixture1
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing BlpImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing BmpImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing BufrStubImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing CurImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing DcxImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing DdsImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing EpsImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing FitsStubImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing FliImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing FpxImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing FtexImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing GbrImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing GifImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing GribStubImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing IcnsImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing IcoImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing ImImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing ImtImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing IptcImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing JpegImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing McIdasImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing MicImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing MpegImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing MpoImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing MspImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing PalmImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing PcdImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing PcxImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing PdfImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing PixarImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing PngImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing PpmImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing PsdImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing SgiImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing SpiderImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing SunImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing TgaImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing TiffImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing WebPImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing WmfImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing XbmImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing XpmImagePlugin
+2020-05-11 14:50:54 - PIL.Image - DEBUG - Importing XVThumbImagePlugin
+2020-05-11 14:51:06 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 14:51:06 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 14:51:06 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 14:51:06 - root - INFO - 生成conftest中的数据:
+2020-05-11 14:51:06 - root - INFO - 生成fixture1
+2020-05-11 14:51:06 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\login.yml的数据
+2020-05-11 14:51:06 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\tenantlist.yml的数据
+2020-05-11 14:52:36 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 14:52:36 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 14:52:36 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 14:52:36 - root - INFO - 生成conftest中的数据:
+2020-05-11 14:52:36 - root - INFO - 生成fixture1
+2020-05-11 14:52:36 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\login.yml的数据
+2020-05-11 14:52:36 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\tenantlist.yml的数据
+2020-05-11 15:00:29 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 15:00:29 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 15:00:29 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 15:00:29 - root - INFO - 生成conftest中的数据:
+2020-05-11 15:00:29 - root - INFO - 当前fixture数据路径为：
+2020-05-11 15:00:29 - root - INFO - e:\test\apiauto\params\tenantmanage\contemp.yml
+2020-05-11 15:00:29 - root - INFO - 生成fixture1
+2020-05-11 15:00:29 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\login.yml的数据
+2020-05-11 15:00:29 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\tenantlist.yml的数据
+2020-05-11 15:43:55 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 15:43:55 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 15:43:55 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 15:43:55 - root - INFO - 生成conftest中的数据:
+2020-05-11 15:43:55 - root - INFO - 当前fixture数据路径为：
+2020-05-11 15:43:55 - root - INFO - e:\test\apiauto\params\tenantmanage\contemp.yml
+2020-05-11 15:43:55 - root - INFO - 生成fixture0
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing BlpImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing BmpImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing BufrStubImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing CurImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing DcxImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing DdsImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing EpsImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing FitsStubImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing FliImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing FpxImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing FtexImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing GbrImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing GifImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing GribStubImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing IcnsImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing IcoImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing ImImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing ImtImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing IptcImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing JpegImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing McIdasImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing MicImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing MpegImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing MpoImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing MspImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing PalmImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing PcdImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing PcxImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing PdfImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing PixarImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing PngImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing PpmImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing PsdImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing SgiImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing SpiderImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing SunImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing TgaImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing TiffImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing WebPImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing WmfImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing XbmImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing XpmImagePlugin
+2020-05-11 15:43:56 - PIL.Image - DEBUG - Importing XVThumbImagePlugin
+2020-05-11 15:44:47 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 15:44:47 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 15:44:47 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 15:44:47 - root - INFO - 生成conftest中的数据:
+2020-05-11 15:44:47 - root - INFO - 当前fixture数据路径为：
+2020-05-11 15:44:47 - root - INFO - e:\test\apiauto\params\tenantmanage\contemp.yml
+2020-05-11 15:44:47 - root - INFO - 生成fixture0
+2020-05-11 15:44:47 - root - INFO - 生成fixture1
+2020-05-11 15:44:47 - root - INFO - 生成fixture2
+2020-05-11 15:44:47 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\login.yml的数据
+2020-05-11 15:44:47 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\tenantlist.yml的数据
+2020-05-11 15:46:23 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 15:46:23 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 15:46:23 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 15:46:23 - root - INFO - 生成conftest中的数据:
+2020-05-11 15:46:23 - root - INFO - 当前fixture数据路径为：
+2020-05-11 15:46:23 - root - INFO - e:\test\apiauto\params\tenantmanage\contemp.yml
+2020-05-11 15:46:23 - root - INFO - 生成fixture0
+2020-05-11 15:46:23 - root - INFO - 生成fixture1
+2020-05-11 15:46:23 - root - INFO - 生成fixture2
+2020-05-11 15:46:23 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\login.yml的数据
+2020-05-11 15:46:23 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\tenantlist.yml的数据
+2020-05-11 15:52:56 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 15:52:56 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 15:52:56 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 15:52:56 - root - INFO - 生成conftest中的数据:
+2020-05-11 15:52:56 - root - INFO - 当前fixture数据路径为：
+2020-05-11 15:52:56 - root - INFO - e:\test\apiauto\params\tenantmanage\contemp.yml
+2020-05-11 15:52:56 - root - INFO - 生成fixture0
+2020-05-11 15:52:56 - root - INFO - 生成fixture1
+2020-05-11 15:52:56 - root - INFO - 生成fixture2
+2020-05-11 15:52:56 - root - INFO - 生成fixture3
+2020-05-11 15:52:56 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\login.yml的数据
+2020-05-11 15:52:56 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\tenantlist.yml的数据
+2020-05-11 16:04:12 - root - INFO - 开始获取params下的yml文件列表
+2020-05-11 16:04:12 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-11 16:04:12 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-11 16:04:12 - root - INFO - 生成conftest中的数据:
+2020-05-11 16:04:12 - root - INFO - 当前fixture数据路径为：
+2020-05-11 16:04:12 - root - INFO - e:\test\apiauto\params\tenantmanage\contemp.yml
+2020-05-11 16:04:12 - root - INFO - 生成fixture0
+2020-05-11 16:04:12 - root - INFO - 生成fixture1
+2020-05-11 16:04:12 - root - INFO - 生成fixture2
+2020-05-11 16:04:12 - root - INFO - 生成fixture3
+2020-05-11 16:04:12 - root - INFO - 生成fixture4
+2020-05-11 16:04:12 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\login.yml的数据
+2020-05-11 16:04:12 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\tenantlist.yml的数据

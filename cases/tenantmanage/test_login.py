@@ -20,9 +20,19 @@ class TestLogin:
         for i in expected:
             assert i in content
     
-    @allure.story('错误的用户名密码')
+    @allure.story('错误的用户名密码null')
     @pytest.mark.parametrize('getdata',[{'seq': 1, 'filep': 'e:\\test\\apiauto\\params\\tenantmanage\\login.yml'}],indirect=True)
     def test_fail(self,getdata):
+        urlpath,headers,param,expected = getdata
+        r = requests.post(url=urlpath,headers=headers,json=param)
+        content = r.text
+        #循环断言
+        for i in expected:
+            assert i in content
+    
+    @allure.story('错误的用户名密码')
+    @pytest.mark.parametrize('getdata',[{'seq': 2, 'filep': 'e:\\test\\apiauto\\params\\tenantmanage\\login.yml'}],indirect=True)
+    def test_fail1(self,getdata):
         urlpath,headers,param,expected = getdata
         r = requests.post(url=urlpath,headers=headers,json=param)
         content = r.text

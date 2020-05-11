@@ -1,3 +1,5 @@
+#模板类型
+templatetype: 1
 #登录参数
 #脚本文件描述
 filedesc: 登录的接口用例 AutoCreate
@@ -11,7 +13,7 @@ cdesc: 登录
 #用例数据
 cdata:
   - 
-    #用例顺序，用于获取参数，因用pytest传参，所以是数组形式，里面只有一个元素
+    #用例顺序，用于获取参数，因用pytest传参，传参是一个字典
     seq: 0
     #用例描述
     fdesc: 正确的用户名，密码
@@ -27,7 +29,7 @@ cdata:
       - '"success":true'
   - 
     seq: 1
-    fdesc: 错误的用户名密码
+    fdesc: 错误的用户名密码null
     fname: test_fail
     path: /admin/adminAccount/login
     headers: {'Content-Type':'application/json;charset=UTF-8'}
@@ -36,11 +38,25 @@ cdata:
       - '"errorCode":"200001002"'
       - '"errorMsg":"用户名或密码错误，请重新输入"'
       - '"success":false'
-#fixture固件相关参数
-prefixture: 
-  filedesc: 获取yml数据，返回请求值以及期望值
-  savepath:
-    - tenantmanage
-    - conftest.py
-  funcname: getdata
-  funcscope: function
+  - 
+    seq: 2
+    fdesc: 错误的用户名密码
+    fname: test_fail1
+    path: /admin/adminAccount/login
+    headers: {'Content-Type':'application/json;charset=UTF-8'}
+    param: {"account":"18668219622","pwd":"111111"}
+    expected:
+      - '"errorCode":"200001002"'
+      - '"errorMsg":"用户名或密码错误，请重新输入"'
+      - '"success":false'
+#使用的fixture
+fixtures:
+#前置fixture,后置fixture,可以为多个
+ pre:
+  -
+   type: 0
+   fdata:
+ aft:
+  -
+   type:
+   fdata:

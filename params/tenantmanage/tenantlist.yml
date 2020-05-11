@@ -1,0 +1,64 @@
+#租户列表参数
+#脚本文件描述
+filedesc: 登录列表的接口用例 AutoCreate
+#生成的脚本文件保存路径 大目录cases下面
+savepath: 
+  - tenantmanage
+  - test_tenantlist.py
+#类名称，描述
+cname: TestTenantList
+cdesc: 租户列表
+#用例数据
+cdata:
+  - 
+    #用例顺序，用于获取参数，因用pytest传参，传参是一个字典
+    seq: 0
+    #用例描述
+    fdesc: 搜索存在的kaixin
+    #用例名，函数名
+    fname: test_kaixin
+    #路径
+    path: /admin/tenant/list
+    #这里的userToken预留，后面获得后进行变更
+    headers: {'Content-Type':'application/json;charset=UTF-8','userToken':''}
+    param: {"page":1,"tenantName":"kaixin"}
+    expected:
+      - '"errorCode":"0"'
+      - '"errorMsg":"success"'
+      - '"tenantName":"kaixin一米"'
+      - '"tenantId":39,"tenantName":"kaixin一米"'
+      - '"total":1'
+
+  - 
+    seq: 1
+    #用例描述
+    fdesc: 搜索没有数据的1111
+    #用例名，函数名
+    fname: test_111
+    #路径
+    path: /admin/tenant/list
+    #这里的userToken预留，后面获得后进行变更
+    headers: {'Content-Type':'application/json;charset=UTF-8'}
+    param: {"page":1,"tenantName":"111"}
+    expected:
+      - '"errorCode":"0"'
+      - '"errorMsg":"success"'
+      - '"total":0'
+#模板类型
+templatetype: 1
+#使用的固件,有序依次排列
+usefixture: [1,0]
+#fixture固件获取token
+prefixture: 
+ #固件类型
+ fixturetype: 1
+ filedesc: 获取token
+ savepath:
+   - tenantmanage
+   - conftest.py
+ funcscope: class
+ path: /admin/adminAccount/login
+ headers: {'Content-Type':'application/json;charset=UTF-8'}
+ param: {"account":"18668219620","pwd":"111111"}
+ #获取需要传递作为前置的值
+ resparam: userToken   
