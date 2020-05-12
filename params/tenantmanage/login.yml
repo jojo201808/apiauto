@@ -53,7 +53,7 @@ cdata:
 fixtures:
  #前置fixture,后置fixture,可以为多个
  pre:
-  -
+  getdata:
    funcname: getdata
    fdata:
  aft:

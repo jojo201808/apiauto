@@ -12,13 +12,10 @@ def getdata(filepath):
     data = getyml.getdata(filepath)
     return data,filepath
 '''
-case_tem1: 普通的post请求模板 templatetype 0
-case_tem2: 增加获取前置token templatetype 1
-
-fixture_tem1: 获取数据的固件fixturetype: 0   
-fixture_tem2：获取返回值的固件如：token的固件 1
-fixture_tem3:
-fixture_tem4:
+case_tem1: 普通的post请求模板 templatetype: 1
+case_tem2: 增加获取前置如token，然后其他如普通的post请求  templatetype: 2
+case_tem3: 在2的基础上增加后置，后置分为两步，1查询需要清理的数据 2.清理数据
+fixture_tem1: fixture统一生成
 
 '''
 
@@ -68,6 +65,9 @@ def generate_script():
         elif data['templatetype'] == 2:
             logger.info('生成用例数据，使用模板2')
             case_tem2(data,filepath)
+        elif data['templatetype'] == 3:
+            logger.info('生成用例数据，使用模板3')
+            case_tem3(data,filepath)
 
 
 #写入conftest模板数据
@@ -131,7 +131,7 @@ class $cname:
         d = {}
         d['fdesc'] = i['fdesc']
         d['funcname'] = i['fname']
-        d['fixturefunc'] = data['fixtures']['pre'][0]['funcname']
+        d['fixturefunc'] = data['fixtures']['pre']['getdata']['funcname']
         d['fixtureparam'] = [{'seq':i['seq'],'filep':filepath }]
         paramlist.append(d)    
     #赋值
@@ -145,6 +145,71 @@ class $cname:
 
 #要用token的模板        
 def case_tem2(data,filepath):
+    #引入库模板
+    si = '''import pytest
+from apiauto.common import getyml,log
+import os
+import requests
+from apiauto.conf import config
+import allure
+
+logger = log.log()
+    '''
+    #脚本描述
+    sdesc = Template('''
+    #$fidesc
+    ''')
+    sdesc_data = {'fidesc':data['filedesc']}
+    sdesc = sdesc.substitute(sdesc_data)
+
+    #类模板
+    sc = Template('''
+@allure.feature('$cdesc')
+class $cname:    
+    ''')
+    sc_data = {'cdesc':data['cdesc'],'cname':data['cname']}
+    sc = sc.substitute(sc_data)
+
+    #方法模板
+    sf = Template('''
+    @allure.story('$fdesc')
+    @pytest.mark.parametrize(('$fixture1func','$fixture2func'),[($fixtureparam,r'$fpath')],indirect=True)
+    def $funcname(self,$fixture2func,$fixture1func):
+        usertoken,paramname = $fixture2func
+        urlpath,headers,param,expected = getdata
+        headers[paramname] = usertoken
+        r = requests.post(url=urlpath,headers=headers,json=param)
+        content = r.text
+        #循环断言
+        for i in expected:
+            assert i in content
+    ''')
+    #获取参数
+    paramlist = []
+    for i in data['cdata']:
+        d = {}
+        d['fdesc'] = i['fdesc']
+        d['funcname'] = i['fname']
+        d['fixture1func'] = data['fixtures']['pre']['getdata']['funcname']
+        d['fixture2func'] = data['fixtures']['pre']['getrspparam']['funcname']
+        d['fixtureparam'] = {'seq':i['seq'],'filep':filepath }
+        d['fpath'] = filepath
+        paramlist.append(d)
+    
+    print(paramlist)
+    #合并
+    script = si + sdesc + sc
+    #赋值
+    for d in paramlist:
+        sfd = sf.substitute(d)
+        script = script + sfd
+    
+    logger.info('生成用例文件%s' % filepath)
+    write_cases(script,data)
+
+
+#在模板2的基础上，数据库查询数据，清理数据
+def case_tem3(data,filepath):
     #引入库模板
     si = '''import pytest
 from apiauto.common import getyml,log
@@ -208,6 +273,8 @@ class $cname:
     write_cases(script,data)
 
 
+
+
 #写入conftest模板数据
 def write_conftest(num,sfixture,data):
     fixturedata = {
@@ -267,32 +334,32 @@ def $fixturefuncname(request):
 def $fixturefuncname(request):
     filepath= request.param
     data = getyml.getdata(filepath)
-    path = data['fixtures']['pre'][1]['fdata']['path']
+    path = data['fixtures']['pre']['getrspparam']['fdata']['path']
     #获取baseurl
     base_url = config.getconfig()['test_env']['baseurl']
     urlpath = base_url + path
-    headers = data['fixtures']['pre'][1]['fdata']['headers']
-    params = data['fixtures']['pre'][1]['fdata']['param']
+    headers = data['fixtures']['pre']['getrspparam']['fdata']['headers']
+    params = data['fixtures']['pre']['getrspparam']['fdata']['param']
     r = requests.post(url=urlpath,headers=headers,json=params)
     content = json.loads(r.text)
     userparam = content['data']
-    paramname = data['fixtures']['pre'][1]['fdata']['resparam']
+    paramname = data['fixtures']['pre']['getrspparam']['fdata']['resparam']
     return userparam,paramname
  
     ''')
     write_conftest(1,sfixture2,data)
 
-    #fixture3数据库操作
+    #fixture3数据库操作，不单独操作，主要用来组合fixture
     sfixture3 = Template('''
 #$desc
-@pytest.fixture(scope="$funcscope")
-def $fixturefuncname(request):
-    sql,deal = request.param
+#@pytest.fixture(scope="$funcscope")
+def $fixturefuncname(sql,deal):
     logger.info('数据库操作%s%s' % (deal,sql))
 
     db = db.Mydb()
     if deal == 'select':
         result = db.select(sql)
+        db.closedb()
         return result
     elif deal == 'update':
         db.update(sql)
@@ -306,7 +373,7 @@ def $fixturefuncname(request):
     ''')
     write_conftest(2,sfixture3,data)
 
-    #fixture4 单纯的接口前置操作，跟fixture2类似，但是不要求返回值
+    #fixture4 单纯的接口操作，跟fixture2类似，但是不要求返回值
     sfixture4 = Template('''
 #$desc
 @pytest.fixture(scope="$funcscope")
@@ -324,10 +391,10 @@ def $fixturefuncname(request):
  
     ''')
     write_conftest(3,sfixture4,data)    
-
+    #fixture5 单纯的接口后置操作,不能作为fixture，但可以用来组合操作
     sfixture5 = Template('''
 #$desc
-@pytest.fixture(scope="$funcscope")
+#@pytest.fixture(scope="$funcscope")
 def $fixturefuncname(request):
     filepath= request.param
     data = getyml.getdata(filepath)
@@ -342,6 +409,7 @@ def $fixturefuncname(request):
  
     ''')
     write_conftest(4,sfixture5,data)    
+
 
 generate_script()
     

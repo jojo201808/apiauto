@@ -512,3 +512,23 @@
 2020-05-12 10:20:50 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\tenantlist.yml的数据
 2020-05-12 10:20:50 - root - INFO - 生成用例数据，使用模板2
 2020-05-12 10:20:50 - root - INFO - 生成用例文件e:\test\apiauto\params\tenantmanage\tenantlist.yml
+2020-05-12 10:35:40 - root - INFO - 开始获取params下的yml文件列表
+2020-05-12 10:35:40 - root - INFO - params文件夹下的所有文件['kxshop', 'tenantmanage']
+2020-05-12 10:35:40 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\contemp.yml的数据
+2020-05-12 10:35:40 - root - INFO - 生成conftest中的数据:
+2020-05-12 10:35:40 - root - INFO - 当前fixture数据路径为：
+2020-05-12 10:35:40 - root - INFO - e:\test\apiauto\params\tenantmanage\contemp.yml
+2020-05-12 10:35:40 - root - INFO - 生成fixture0
+2020-05-12 10:35:40 - root - INFO - 生成fixture1
+2020-05-12 10:35:40 - root - INFO - 生成fixture2
+2020-05-12 10:35:40 - root - INFO - 生成fixture3
+2020-05-12 10:35:40 - root - INFO - 生成fixture4
+2020-05-12 10:35:40 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\login.yml的数据
+2020-05-12 10:35:40 - root - INFO - 生成用例数据，使用模板1
+2020-05-12 10:35:40 - root - INFO - 生成用例文件
+2020-05-12 10:35:40 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\sendmessage.yml的数据
+2020-05-12 10:35:40 - root - INFO - 生成用例数据，使用模板2
+2020-05-12 10:35:40 - root - INFO - 生成用例文件e:\test\apiauto\params\tenantmanage\sendmessage.yml
+2020-05-12 10:35:40 - root - INFO - 获取e:\test\apiauto\params\tenantmanage\tenantlist.yml的数据
+2020-05-12 10:35:40 - root - INFO - 生成用例数据，使用模板2
+2020-05-12 10:35:40 - root - INFO - 生成用例文件e:\test\apiauto\params\tenantmanage\tenantlist.yml

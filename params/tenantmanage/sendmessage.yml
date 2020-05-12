@@ -1,50 +1,49 @@
-templatetype: 2
+templatetype: 3
 #租户列表参数
 #脚本文件描述
-filedesc: 租户列表的接口用例 AutoCreate
+filedesc: 发送消息接口用例 AutoCreate
 #生成的脚本文件保存路径 大目录cases下面
 savepath: 
   - tenantmanage
-  - test_tenantlist.py
+  - test_addmessage.py
 #类名称，描述
-cname: TestTenantList
-cdesc: 租户列表
+cname: TestAddmessage
+cdesc: 发送消息
 #用例数据
 cdata:
   - 
     #用例顺序，用于获取参数，因用pytest传参，传参是一个字典
     seq: 0
     #用例描述
-    fdesc: 搜索存在的kaixin
+    fdesc: 发送消息内容为通知
     #用例名，函数名
-    fname: test_kaixin
+    fname: test_send01
     #路径
-    path: /admin/tenant/list
+    path: /admin/message/addMessage
     #这里的userToken预留，后面获得后进行变更
-    headers: {'Content-Type':'application/json;charset=UTF-8','userToken':''}
-    param: {"page":1,"tenantName":"kaixin"}
+    headers: {
+      'Content-Type':'application/json;
+      charset=UTF-8','userToken':''
+      }
+    param: {"type":2,"title":"222aab","content":"<p>23233</p>"}
     expected:
       - '"errorCode":"0"'
       - '"errorMsg":"success"'
-      - '"tenantName":"kaixin一米"'
-      - '"tenantId":39,"tenantName":"kaixin一米"'
-      - '"total":1'
 
   - 
     seq: 1
     #用例描述
-    fdesc: 搜索没有数据的1111
+    fdesc: 发送消息内容为公告
     #用例名，函数名
-    fname: test_111
+    fname: test_send02
     #路径
-    path: /admin/tenant/list
+    path: /admin/message/addMessage
     #这里的userToken预留，后面获得后进行变更
-    headers: {'Content-Type':'application/json;charset=UTF-8'}
-    param: {"page":1,"tenantName":"111"}
+    headers: {'Content-Type':'application/json;charset=UTF-8','userToken':''}
+    param: {"type":1,"title":"1313aaab","content":"<p>1313</p>"}
     expected:
       - '"errorCode":"0"'
       - '"errorMsg":"success"'
-      - '"total":0'
 #fixture固件获取token
 fixtures: 
  pre:
@@ -60,5 +59,5 @@ fixtures:
     resparam: userToken
  aft:
   -
-   type:
+   funcname:
    fdata:

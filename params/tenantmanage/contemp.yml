@@ -44,7 +44,7 @@ templates:
 
 -
   type: 4
-  desc: 单纯的接口后置操作
+  desc: 单纯的接口操作
   funcname: reqafter
   savepath: 
     - tenantmanage

@@ -7,14 +7,14 @@ import allure
 
 logger = log.log()
     
-    #租户列表的接口用例 AutoCreate
+    #发送消息接口用例 AutoCreate
     
-@allure.feature('租户列表')
-class TestTenantList:    
+@allure.feature('发送消息')
+class TestAddmessage:    
     
-    @allure.story('搜索存在的kaixin')
-    @pytest.mark.parametrize(('getdata','getrspparam'),[({'seq': 0, 'filep': 'e:\\test\\apiauto\\params\\tenantmanage\\tenantlist.yml'},r'e:\test\apiauto\params\tenantmanage\tenantlist.yml')],indirect=True)
-    def test_kaixin(self,getrspparam,getdata):
+    @allure.story('发送消息内容为通知')
+    @pytest.mark.parametrize(('getdata','getrspparam'),[({'seq': 0, 'filep': 'e:\\test\\apiauto\\params\\tenantmanage\\sendmessage.yml'},r'e:\test\apiauto\params\tenantmanage\sendmessage.yml')],indirect=True)
+    def test_send01(self,getrspparam,getdata):
         usertoken,paramname = getrspparam
         urlpath,headers,param,expected = getdata
         headers[paramname] = usertoken
@@ -24,9 +24,9 @@ class TestTenantList:
         for i in expected:
             assert i in content
     
-    @allure.story('搜索没有数据的1111')
-    @pytest.mark.parametrize(('getdata','getrspparam'),[({'seq': 1, 'filep': 'e:\\test\\apiauto\\params\\tenantmanage\\tenantlist.yml'},r'e:\test\apiauto\params\tenantmanage\tenantlist.yml')],indirect=True)
-    def test_111(self,getrspparam,getdata):
+    @allure.story('发送消息内容为公告')
+    @pytest.mark.parametrize(('getdata','getrspparam'),[({'seq': 1, 'filep': 'e:\\test\\apiauto\\params\\tenantmanage\\sendmessage.yml'},r'e:\test\apiauto\params\tenantmanage\sendmessage.yml')],indirect=True)
+    def test_send02(self,getrspparam,getdata):
         usertoken,paramname = getrspparam
         urlpath,headers,param,expected = getdata
         headers[paramname] = usertoken
