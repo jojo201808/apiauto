@@ -1,4 +1,4 @@
-#模板类型
+#模板类型，只有一个获取数据的fixture
 templatetype: 1
 #登录参数
 #脚本文件描述
@@ -51,10 +51,10 @@ cdata:
       - '"success":false'
 #使用的fixture
 fixtures:
-#前置fixture,后置fixture,可以为多个
+ #前置fixture,后置fixture,可以为多个
  pre:
   -
-   type: 0
+   funcname: getdata
    fdata:
  aft:
   -

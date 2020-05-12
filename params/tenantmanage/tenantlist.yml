@@ -1,3 +1,4 @@
+templatetype: 2
 #租户列表参数
 #脚本文件描述
 filedesc: 登录列表的接口用例 AutoCreate
@@ -44,21 +45,20 @@ cdata:
       - '"errorCode":"0"'
       - '"errorMsg":"success"'
       - '"total":0'
-#模板类型
-templatetype: 1
-#使用的固件,有序依次排列
-usefixture: [1,0]
 #fixture固件获取token
-prefixture: 
- #固件类型
- fixturetype: 1
- filedesc: 获取token
- savepath:
-   - tenantmanage
-   - conftest.py
- funcscope: class
- path: /admin/adminAccount/login
- headers: {'Content-Type':'application/json;charset=UTF-8'}
- param: {"account":"18668219620","pwd":"111111"}
- #获取需要传递作为前置的值
- resparam: userToken   
+fixtures: 
+ pre:
+  -
+   funcname: getdata
+   fdata:
+  -
+   funcname: getrspparam
+   fdata:
+    path: /admin/adminAccount/login
+    headers: {'Content-Type':'application/json;charset=UTF-8'}
+    param: {"account":"18668219620","pwd":"111111"}
+    resparam: userToken
+ aft:
+  -
+   type:
+   fdata:

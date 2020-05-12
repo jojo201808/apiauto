@@ -63,26 +63,20 @@ def generate_script():
             logger.info(filepath)
             fixture_tem1(data,filepath)
         elif data['templatetype'] == 1:
+            logger.info('生成用例数据，使用模板1')
             case_tem1(data,filepath)
+        elif data['templatetype'] == 2:
+            logger.info('生成用例数据，使用模板2')
+            case_tem2(data,filepath)
 
 
 #写入conftest模板数据
-def write_cases(num,sfixture,data):
-    fixturedata = {
-        'funcscope':data['templates'][num]['funcscope'],
-        'fixturefuncname':data['templates'][num]['funcname'],
-        'desc':data['templates'][num]['desc'] 
-        }
-    sfixture = sfixture.substitute(fixturedata)
-    #创建测试固件
-    ffilepath = os.path.join(os.getcwd(),'cases',data['templates'][num]['savepath'][0],data['templates'][num]['savepath'][1])
-    logger.info('生成fixture%d' % num)
-    if num == 0:
-        with open(ffilepath,'w',encoding='utf-8') as f:
-            f.write(sfixture) 
-    else:
-        with open(ffilepath,'a',encoding='utf-8') as f:
-            f.write(sfixture)
+def write_cases(script,data):
+    
+    #创建py用例脚本文件
+    filepath = os.path.join(os.getcwd(),'cases',data['savepath'][0],data['savepath'][1])
+    with open(filepath,'w',encoding='utf-8') as f:
+        f.write(script)
 
 
     
@@ -127,38 +121,39 @@ class $cname:
         for i in expected:
             assert i in content
     ''')
+
+    #合并
+    script = si + sdesc + sc
+
     #获取参数
     paramlist = []
     for i in data['cdata']:
         d = {}
         d['fdesc'] = i['fdesc']
         d['funcname'] = i['fname']
-        d['fixturefunc'] = data['fixturefuncname']
+        d['fixturefunc'] = data['fixtures']['pre'][0]['funcname']
         d['fixtureparam'] = [{'seq':i['seq'],'filep':filepath }]
-        paramlist.append(d)
-    
-    print(paramlist)
-    #合并
-    script = si + sdesc + sc
+        paramlist.append(d)    
     #赋值
     for d in paramlist:
         sfd = sf.substitute(d)
         script = script + sfd
-    
-    #创建py用例脚本文件
-    filepath = os.path.join(os.getcwd(),'cases',data['savepath'][0],data['savepath'][1])
-    with open(filepath,'w',encoding='utf-8') as f:
-        f.write(script)
+        
+    logger.info('生成用例文件')
+    write_cases(script,data)
+
 
 #要用token的模板        
 def case_tem2(data,filepath):
     #引入库模板
     si = '''import pytest
-from apiauto.common import getyml
+from apiauto.common import getyml,log
 import os
 import requests
 from apiauto.conf import config
 import allure
+
+logger = log.log()
     '''
     #脚本描述
     sdesc = Template('''
@@ -178,10 +173,9 @@ class $cname:
     #方法模板
     sf = Template('''
     @allure.story('$fdesc')
-    @pytest.mark.parametrize(('getdata','$fixturefunc'),[($fixtureparam,r'$fpath')],indirect=True)
-    #@pytest.mark.parametrize('$fixturefunc','$fpath',indirect=True)
-    def $funcname(self,$fixturefunc,getdata):
-        usertoken,paramname = $fixturefunc
+    @pytest.mark.parametrize(('$fixture1func','$fixture2func'),[($fixtureparam,r'$fpath')],indirect=True)
+    def $funcname(self,$fixture2func,$fixture1func):
+        usertoken,paramname = $fixture2func
         urlpath,headers,param,expected = getdata
         headers[paramname] = usertoken
         r = requests.post(url=urlpath,headers=headers,json=param)
@@ -196,7 +190,8 @@ class $cname:
         d = {}
         d['fdesc'] = i['fdesc']
         d['funcname'] = i['fname']
-        d['fixturefunc'] = data['fixturefuncname']
+        d['fixture1func'] = data['fixtures']['pre'][0]['funcname']
+        d['fixture2func'] = data['fixtures']['pre'][1]['funcname']
         d['fixtureparam'] = {'seq':i['seq'],'filep':filepath }
         d['fpath'] = filepath
         paramlist.append(d)
@@ -209,14 +204,8 @@ class $cname:
         sfd = sf.substitute(d)
         script = script + sfd
     
-    #创建py用例脚本文件
-    filepath = os.path.join(os.getcwd(),'cases',data['savepath'][0],data['savepath'][1])
-    with open(filepath,'w',encoding='utf-8') as f:
-        f.write(script)
-
-    #创建前置
-    if 'prefixture' in data.keys():
-        fixture_tem2(data,filepath)    
+    logger.info('生成用例文件%s' % filepath)
+    write_cases(script,data)
 
 
 #写入conftest模板数据
@@ -278,16 +267,16 @@ def $fixturefuncname(request):
 def $fixturefuncname(request):
     filepath= request.param
     data = getyml.getdata(filepath)
-    path = data['prefixture']['path']
+    path = data['fixtures']['pre'][1]['fdata']['path']
     #获取baseurl
     base_url = config.getconfig()['test_env']['baseurl']
     urlpath = base_url + path
-    headers = data['prefixture']['headers']
-    params = data['prefixture']['param']
+    headers = data['fixtures']['pre'][1]['fdata']['headers']
+    params = data['fixtures']['pre'][1]['fdata']['param']
     r = requests.post(url=urlpath,headers=headers,json=params)
     content = json.loads(r.text)
     userparam = content['data']
-    paramname = data['prefixture']['resparam']
+    paramname = data['fixtures']['pre'][1]['fdata']['resparam']
     return userparam,paramname
  
     ''')

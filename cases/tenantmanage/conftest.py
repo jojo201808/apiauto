@@ -32,16 +32,16 @@ def getdata(request):
 def getrspparam(request):
     filepath= request.param
     data = getyml.getdata(filepath)
-    path = data['prefixture']['path']
+    path = data['fixtures']['pre'][1]['fdata']['path']
     #获取baseurl
     base_url = config.getconfig()['test_env']['baseurl']
     urlpath = base_url + path
-    headers = data['prefixture']['headers']
-    params = data['prefixture']['param']
+    headers = data['fixtures']['pre'][1]['fdata']['headers']
+    params = data['fixtures']['pre'][1]['fdata']['param']
     r = requests.post(url=urlpath,headers=headers,json=params)
     content = json.loads(r.text)
     userparam = content['data']
-    paramname = data['prefixture']['resparam']
+    paramname = data['fixtures']['pre'][1]['fdata']['resparam']
     return userparam,paramname
  
     

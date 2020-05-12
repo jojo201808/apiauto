@@ -1,1 +1,3 @@
-a = {'aa':bb}
+import pytest
+
+pytest.main(['-s'])

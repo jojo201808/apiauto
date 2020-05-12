@@ -1,9 +1,11 @@
 import pytest
-from apiauto.common import getyml
+from apiauto.common import getyml,log
 import os
 import requests
 from apiauto.conf import config
 import allure
+
+logger = log.log()
     
     #登录的接口用例 AutoCreate
     
